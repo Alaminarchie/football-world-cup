@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+p {
+    line-height: 23px;
+}
+.container {
+    width: 80%;
+    margin: 30px auto;
+}
+/*
+ Header Section Start
+ */
+.banner {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: #161616;
+    border-radius: 20px;
+}
+.banner-left,
+.banner-right {
+    width: 50%;
+}
+.banner-left{
+    padding: 40px;
+}
+.banner-left h1 {
+    font-size: 50px;
+    text-align: left;
+    margin: 15px 0;
+}
+.banner-left a {
+    text-decoration: none;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-top: 15px;
+    color: #fff;
+    background-color: #dd0000;
+}
+.banner-right img {
+    width: 80%;
+    display: block;
+    margin: 30px auto 0;
+}
+/*
+ Header Section End
+ */
+
+ /*
+ Main Section Start
+ */
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+#menu {
+    width: 20%;
+}
+#blogs, #countrys {
+    width: 80%;
+}
+.menu ul {
+    position: sticky;
+    left: 0px;
+    top: 0px;
+    padding: 15px;
+    background-color: #161616;
+    border-radius: 10px;
+}
+.menu ul li {
+    font-size: 17px;
+    font-weight: 600;
+    list-style: none;
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+.menu ul .select {
+    background-color: #dd0000;
+}
+.menu ul .select a {
+    color: #fff;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #161616;
+}
+.blogs, .countrys {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.blog {
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+}
+.thumbnail img {
+    width: 100%;
+}
+.blog-footer {
+    padding: 10px;
+}
+.blog button {
+    font-weight: 600;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #161616;
+}
+.blog-footer h2 {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+.article-footer {
+    display: flex;
+    align-items: center;
+}
+.article-footer .fa-message {
+    margin-left: 50px;
+}
+.article-footer p {
+    padding-left: 10px;
+}
+ /*
+ Main Section End
+ */
+ /*
+ Macth Section Start
+ */
+.match {
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+}
+.flag{
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flag p{
+    font-size: 16px;
+    font-weight: 600;
+}
+.flag img{
+    width: 60px;
+}
+.country h3{
+    font-size: 18px;
+    padding: 10px;
+}
+.country p{
+    font-size: 14px;
+}
+ /*
+ Macth Section End
+ */
+
+ /*
+ Footer Section STart
+ */
+footer.container {
+    background-color: #161616;
+    color: #fff;
+}
+.sitename h1 {
+    text-align: center;
+    padding: 40px 0;
+}
+hr {
+    width: 80%;
+    margin: 0 auto;
+    color: #ffffff;
+    opacity: 10%;
+}
+.menu-items {
+    text-align: center;
+    padding: 30px;
+}
+.menu-items a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+}
+ /*
+ Footer Section STart
+ */
+
+ /* Small Device Responsive Desgin */
+ @media only screen and (max-width: 576px){
+    .banner{        
+        display: block;
+    }
+    .banner-left, .banner-right{
+        width: 100%;
+    }
+    .row{
+        display: block;
+    }
+    .menu ul{
+        background-color: transparent;
+    }
+    .menu ul li {
+        border-radius: 10px;
+        border: 1px solid #e8e8e8;
+    }
+    #menu, #blogs, #countrys{
+        width: 100%;
+    }
+    .blogs, .countrys{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .menu-items a{
+        display: block;
+    }
+ }
+ /* Table Device Responsive */
+ @media only screen and (min-width: 576px) and (max-width: 768px) {
+    .banner{        
+        display: block;
+    }
+    .banner-left, .banner-right{
+        width: 100%;
+    }
+    .blogs, .countrys{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu-items a{
+        display: block;
+    }
+}
