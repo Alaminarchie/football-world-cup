@@ -29,8 +29,10 @@ p {
 .banner-left,
 .banner-right {
     width: 50%;
+    animation-duration: 3s;
+    animation-name: slidein;
 }
-.banner-left{
+.banner-left {
     padding: 40px;
 }
 .banner-left h1 {
@@ -57,7 +59,7 @@ p {
  Header Section End
  */
 
- /*
+/*
  Main Section Start
  */
 .row {
@@ -68,7 +70,8 @@ p {
 #menu {
     width: 20%;
 }
-#blogs, #countrys {
+#blogs,
+#countrys {
     width: 80%;
 }
 .menu ul {
@@ -99,7 +102,8 @@ p {
     text-decoration: none;
     color: #161616;
 }
-.blogs, .countrys {
+.blogs,
+.countrys {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -136,10 +140,10 @@ p {
 .article-footer p {
     padding-left: 10px;
 }
- /*
+/*
  Main Section End
  */
- /*
+/*
  Macth Section Start
  */
 .match {
@@ -148,31 +152,31 @@ p {
     padding: 30px 20px;
     text-align: center;
 }
-.flag{
+.flag {
     padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.flag p{
+.flag p {
     font-size: 16px;
     font-weight: 600;
 }
-.flag img{
+.flag img {
     width: 60px;
 }
-.country h3{
+.country h3 {
     font-size: 18px;
     padding: 10px;
 }
-.country p{
+.country p {
     font-size: 14px;
 }
- /*
+/*
  Macth Section End
  */
 
- /*
+/*
  Footer Section STart
  */
 footer.container {
@@ -198,50 +202,73 @@ hr {
     color: #fff;
     margin-left: 10px;
 }
- /*
+/*
  Footer Section STart
  */
 
- /* Small Device Responsive Desgin */
- @media only screen and (max-width: 576px){
-    .banner{        
+/* Small Device Responsive Desgin */
+@media only screen and (max-width: 576px) {
+    .container {
+        width: 95%;
+    }
+    .banner {
         display: block;
     }
-    .banner-left, .banner-right{
+    .banner-left,
+    .banner-right {
         width: 100%;
     }
-    .row{
+    .row {
         display: block;
     }
-    .menu ul{
+    .menu ul {
         background-color: transparent;
     }
     .menu ul li {
         border-radius: 10px;
         border: 1px solid #e8e8e8;
     }
-    #menu, #blogs, #countrys{
+    #menu,
+    #blogs,
+    #countrys {
         width: 100%;
     }
-    .blogs, .countrys{
+    .blogs,
+    .countrys {
         grid-template-columns: repeat(1, 1fr);
     }
-    .menu-items a{
+    .menu-items a {
         display: block;
     }
- }
- /* Table Device Responsive */
- @media only screen and (min-width: 576px) and (max-width: 768px) {
-    .banner{        
+}
+/* Table Device Responsive */
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .banner {
         display: block;
     }
-    .banner-left, .banner-right{
+    .banner-left,
+    .banner-right {
         width: 100%;
     }
-    .blogs, .countrys{
+    .blogs,
+    .countrys {
         grid-template-columns: repeat(2, 1fr);
     }
-    .menu-items a{
+    .menu-items a {
         display: block;
+    }
+}
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
     }
 }
